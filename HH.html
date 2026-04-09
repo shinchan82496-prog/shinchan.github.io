@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+
+    <div id="login-container" class="auth-card">
+        <h2>Student Login</h2>
+        <input type="text" id="reg-num" placeholder="Registration Number">
+        <input type="password" id="password" placeholder="Password">
+        <select id="section">
+            <option value="">Select Section</option>
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+        </select>
+        <button onclick="handleLogin()">Login</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <nav class="sidebar">
+            <h3>Portal</h3>
+            <ul>
+                <li onclick="showTab('class')">Class</li>
+                <li onclick="showTab('syllabus')">Syllabus</li>
+                <li onclick="showTab('study-doc')">Study Docs</li>
+                <li onclick="showTab('others')">Others</li>
+            </ul>
+        </nav>
+        <main class="content">
+            <div id="tab-content">
+                <h1>Welcome, Student</h1>
+                <p>Select an option from the sidebar to begin.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #f0f0f0;
+    --accent-color: #bb86fc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidden { display: none; }
+
+#dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background: var(--card-bg);
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { 
+    padding: 15px; 
+    cursor: pointer; 
+    border-bottom: 1px solid #eee; 
+}
+
+.sidebar li:hover { color: var(--accent-color); }
+
+/* Switch Toggle Styling */
+.theme-switch-wrapper { display: flex; align-items: center; padding: 20px; }
+.theme-switch { display: inline-block; height: 34px; position: relative; width: 60px; }
+.slider { background-color: #ccc; bottom: 0; cursor: pointer; left: 0; position: absolute; right: 0; top: 0; transition: .4s; border-radius: 34px; }
+input:checked + .slider { background-color: var(--accent-color); }
