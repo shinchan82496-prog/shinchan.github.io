@@ -1,7 +1,7 @@
 // A simple list of "Authorized" students
 const authorizedStudents = [
-    { reg: "251FA18214", pass: "password123", sec: "A" },
-    { reg: "251FA18215", pass: "student456", sec: "B" }
+    { reg: "251FA18214", pass: "password123", sec: "27" },
+    { reg: "251FA18215", pass: "student456", sec: "1" }
 ];
 
 function handleLogin() {
